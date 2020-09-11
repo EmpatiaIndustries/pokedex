@@ -20,6 +20,16 @@ Index.getInitialProps = async (ctx) => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
   const data = await res.json();
 
+  let infor;
+
+  data.results.forEach((info) => {
+    infor = info.url;
+
+    const url = {
+      infor,
+    };
+  });
+
   return { pokemon: data.results };
 };
 
