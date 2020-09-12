@@ -1,9 +1,9 @@
 import Router from "next/router";
 
-const Posts = (props) => {
+const Posts = ({ pokemon }) => {
   return (
     <ul className="list-group">
-      {props.pokemon.map((poke, index) => (
+      {pokemon.map((poke, index) => (
         <li
           key={index}
           onClick={(e) => Router.push("/pokemon/[id]", `/pokemon/${poke.name}`)}

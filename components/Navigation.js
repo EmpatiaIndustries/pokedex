@@ -3,8 +3,10 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <h3 className="navbar-brand">NEXT.POKE</h3>
+      <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+        <h3 style={{ color: "yellow" }} className="navbar-brand">
+          NEXT.POKE
+        </h3>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,7 +22,7 @@ const Navigation = () => {
           <ul className="navbar-nav">
             <li className="nav-item active">
               <Link href="/">
-                <a className="nav-link">index</a>
+                <a className="nav-link">pokémons</a>
               </Link>
             </li>
             <li className="nav-item">
