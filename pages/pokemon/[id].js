@@ -18,14 +18,14 @@ const PokeProfile = ({ poke }) => {
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-md-6 p-0 text-center">
+                <div className="col-xs-6 col-sm-6 col-md-6 p-0 text-center">
                   <img
                     style={{ width: 250, height: "auto" }}
                     src={poke.images.front}
                     alt="frente"
                   />
                 </div>
-                <div className="col-md-6 p-0 text-center">
+                <div className="col-xs-6 col-sm-6 col-md-6 p-0 text-center">
                   <img
                     style={{ width: 250, height: "auto" }}
                     src={poke.images.back}
