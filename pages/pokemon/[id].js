@@ -13,8 +13,15 @@ const PokeProfile = ({ poke }) => {
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <div className="card">
-            <div className="card-header text-center">
-              <h1 style={{ textTransform: "capitalize" }}>{poke.name}</h1>
+            <div className="card-header text-center bg-danger">
+              <h1
+                style={{
+                  textTransform: "capitalize",
+                  color: "white",
+                }}
+              >
+                {poke.name}
+              </h1>
             </div>
             <div className="card-body">
               <div className="row">
@@ -25,13 +32,14 @@ const PokeProfile = ({ poke }) => {
                     alt="frente"
                   />
                 </div>
-                <div className="col-xs-6 col-sm-6 col-md-6 p-0 text-center">
+                <div className=" d-none d-sm-block col-xs-6 col-sm-6 col-md-6 p-0 text-center">
                   <img
                     style={{ width: 250, height: "auto" }}
                     src={poke.images.back}
                     alt="atras"
                   />
                 </div>
+
                 <div className="col-md-12 text-center">
                   <label className="h5"> TYPES: </label>
 
@@ -126,15 +134,32 @@ const PokeProfile = ({ poke }) => {
                     {poke.types.type2}
                   </p>
                   <label className="h5"> ABILITIES: </label>
-                  <li style={{ textTransform: "capitalize" }}>
+                  <li
+                    style={{
+                      textTransform: "capitalize",
+                      backgroundColor: "#f1f1f1",
+                      borderRadius: "12px",
+                    }}
+                  >
                     {poke.abilities.ability1}
                   </li>
-                  <li style={{ textTransform: "capitalize" }}>
+                  <br />
+                  <li
+                    style={{
+                      textTransform: "capitalize",
+                      backgroundColor: "#f1f1f1",
+                      borderRadius: "12px",
+                    }}
+                  >
                     {poke.abilities.ability2}
                   </li>
                   <br />
                   <label className="h5"> EXPERIENCE BASE: </label>
-                  <p>{poke.baseExperience}</p>
+                  <p
+                    style={{ backgroundColor: "#f1f1f1", borderRadius: "12px" }}
+                  >
+                    {poke.baseExperience}
+                  </p>
                 </div>
               </div>
             </div>

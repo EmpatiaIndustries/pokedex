@@ -19,8 +19,4 @@ const Posts = ({ pokemon }) => {
   );
 };
 
-Posts.getInitialProps = async (ctx) => {
-  return {};
-};
-
 export default Posts;
