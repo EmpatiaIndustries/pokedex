@@ -4,9 +4,12 @@ const Navigation = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
-        <h3 style={{ color: "yellow" }} className="navbar-brand">
-          NEXT.POKE
-        </h3>
+        <img
+          className="navbar-brand"
+          style={{ width: 150, height: 100 }}
+          src={require("../Pokemon_logo.svg")}
+          alt="logo pokemon"
+        />
         <button
           className="navbar-toggler"
           type="button"

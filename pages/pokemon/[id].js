@@ -14,9 +14,9 @@ const PokeProfile = ({ poke }) => {
         <div className="col-md-6 offset-md-3">
           <div className="card">
             <div className="card-header text-center">
-              <h1>{poke.name}</h1>
+              <h1 style={{ textTransform: "capitalize" }}>{poke.name}</h1>
             </div>
-            <div style={{ color: "green" }} className="card-body">
+            <div className="card-body">
               <div className="row">
                 <div className="col-md-6 p-0 text-center">
                   <img
@@ -33,12 +33,108 @@ const PokeProfile = ({ poke }) => {
                   />
                 </div>
                 <div className="col-md-12 text-center">
-                  <label className="h3"> TYPES: </label>
-                  <p>{poke.types.type1 + " " + poke.types.type2}</p>
-                  <label className="h3"> ABILITIES: </label>
-                  <p>
-                    {poke.abilities.ability1 + " " + poke.abilities.ability2}
+                  <label className="h5"> TYPES: </label>
+
+                  <p
+                    style={{
+                      color: "white",
+                      borderRadius: "12px",
+                      textTransform: "capitalize",
+                      backgroundColor:
+                        poke.types.type1 === "fire"
+                          ? "#fd7d24"
+                          : poke.types.type1 === "water"
+                          ? "#4592c4"
+                          : poke.types.type1 === "grass"
+                          ? "#9bcc50"
+                          : poke.types.type1 === "poison"
+                          ? "#b97fc9"
+                          : poke.types.type1 === "flying"
+                          ? "#3dc7ef"
+                          : poke.types.type1 === "bug"
+                          ? "#729f3f"
+                          : poke.types.type1 === "normal"
+                          ? "#a4acaf"
+                          : poke.types.type1 === "electric"
+                          ? "#eed535"
+                          : poke.types.type1 === "ground"
+                          ? "#f7de3f"
+                          : poke.types.type1 === "fairy"
+                          ? "#fdb9e9"
+                          : poke.types.type1 === "fighting"
+                          ? "#d56723"
+                          : poke.types.type1 === "psychic"
+                          ? "#ee82ee"
+                          : poke.types.type1 === "rock"
+                          ? "#a38c21"
+                          : poke.types.type1 === "steel"
+                          ? "#d3d3d3"
+                          : poke.types.type1 === "ice"
+                          ? "#51c4e7"
+                          : poke.types.type1 === "ghost"
+                          ? "#7b62a3"
+                          : poke.types.type1 === "dragon"
+                          ? "#53a4cf"
+                          : "",
+                    }}
+                  >
+                    {poke.types.type1}
                   </p>
+                  <p
+                    style={{
+                      color: "white",
+                      borderRadius: "12px",
+                      textTransform: "capitalize",
+                      backgroundColor:
+                        poke.types.type2 === "fire"
+                          ? "#fd7d24"
+                          : poke.types.type2 === "water"
+                          ? "#4592c4"
+                          : poke.types.type2 === "grass"
+                          ? "#9bcc50"
+                          : poke.types.type2 === "poison"
+                          ? "#b97fc9"
+                          : poke.types.type2 === "flying"
+                          ? "#3dc7ef"
+                          : poke.types.type2 === "bug"
+                          ? "#729f3f"
+                          : poke.types.type2 === "normal"
+                          ? "#a4acaf"
+                          : poke.types.type2 === "electric"
+                          ? "#eed535"
+                          : poke.types.type2 === "ground"
+                          ? "#f7de3f"
+                          : poke.types.type2 === "fairy"
+                          ? "#fdb9e9"
+                          : poke.types.type2 === "fighting"
+                          ? "#d56723"
+                          : poke.types.type2 === "psychic"
+                          ? "#ee82ee"
+                          : poke.types.type2 === "rock"
+                          ? "#a38c21"
+                          : poke.types.type2 === "steel"
+                          ? "#d3d3d3"
+                          : poke.types.type2 === "ice"
+                          ? "#51c4e7"
+                          : poke.types.type2 === "ghost"
+                          ? "#7b62a3"
+                          : poke.types.type2 === "dragon"
+                          ? "#53a4cf"
+                          : "",
+                    }}
+                  >
+                    {poke.types.type2}
+                  </p>
+                  <label className="h5"> ABILITIES: </label>
+                  <li style={{ textTransform: "capitalize" }}>
+                    {poke.abilities.ability1}
+                  </li>
+                  <li style={{ textTransform: "capitalize" }}>
+                    {poke.abilities.ability2}
+                  </li>
+                  <br />
+                  <label className="h5"> EXPERIENCE BASE: </label>
+                  <p>{poke.baseExperience}</p>
                 </div>
               </div>
             </div>
@@ -60,6 +156,7 @@ PokeProfile.getInitialProps = async (ctx) => {
       front: dataJSON.sprites.front_default,
       back: dataJSON.sprites.back_default,
     },
+    baseExperience: dataJSON.base_experience,
     types: {
       type1: dataJSON.types[0].type.name,
       type2: dataJSON.types[1] === undefined ? "" : dataJSON.types[1].type.name,
