@@ -1,5 +1,6 @@
 import Link from "next/link";
 import pokeball from "../pokeball.svg";
+
 const Navigation = () => {
   return (
     <div>
@@ -43,29 +44,10 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-
-          <div
-            style={{ marginLeft: "800px" }}
-            className="md-form active-pink active-pink-2 mb-3 mt-0"
-          >
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Search"
-              aria-label="Search"
-              onChange={(e) => {
-                onChange(e);
-              }}
-            />
-          </div>
         </div>
       </nav>
     </div>
   );
-};
-
-const onChange = (e) => {
-  console.log(e.target.value);
 };
 
 export default Navigation;
