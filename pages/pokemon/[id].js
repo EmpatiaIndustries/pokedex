@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-
+import Link from "next/link";
 import fetch from "isomorphic-fetch";
 import Container from "../../components/container";
 
@@ -160,6 +160,21 @@ const PokeProfile = ({ poke }) => {
                   >
                     {poke.baseExperience}
                   </p>
+                  <div className="container">
+                    <Link href="/">
+                      <button
+                        style={{
+                          backgroundColor: "red",
+                          color: "white",
+                          fontWeight: "bold",
+                          borderRadius: "11px",
+                        }}
+                        type="button"
+                      >
+                        BACK
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
