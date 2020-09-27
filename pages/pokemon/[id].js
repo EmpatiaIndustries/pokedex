@@ -12,7 +12,7 @@ const PokeProfile = ({ poke }) => {
     <Container>
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card">
+          <div className="card  animate__animated animate__zoomIn">
             <div className="card-header text-center bg-danger">
               <h1
                 style={{
@@ -41,7 +41,7 @@ const PokeProfile = ({ poke }) => {
                 </div>
 
                 <div className="col-md-12 text-center">
-                  <label className="h5"> TYPES: </label>
+                  <label className="h5">TYPES: </label>
 
                   <p
                     style={{
